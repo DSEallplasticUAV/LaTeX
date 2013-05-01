@@ -9,7 +9,6 @@
 \usepackage[T1]{fontenc}
 \usepackage{nicefrac}
 \usepackage{amsfonts}
-
 %nomenclature
 \usepackage{makeidx}
 \makeindex
@@ -27,12 +26,15 @@
 \usepackage[titletoc]{appendix}
 %Possible to change the margins
 \usepackage{geometry}
-\geometry{verbose,tmargin=1.9cm,bmargin=1.7cm,lmargin=1cm,rmargin=1cm}
+\geometry{verbose,tmargin=1.9cm,bmargin=1.7cm,lmargin=2.2cm,rmargin=2.2cm}
 
 \usepackage{subfig}
 
 %include pdf pages
 \usepackage{pdfpages}
+
+%Small titles
+\usepackage[small,compact]{titlesec}
 
 %being able to create tables over multiple pages
 \usepackage{longtable}
@@ -68,7 +70,7 @@ In this chapter the the requirements for the whole system are investigated. The 
 The Functional Breakdown is a diagram used to find all functions the product should be able to perform. These functions are performed by a combination of minor functions. By putting all minor function under the corresponding major functions, which lead to the main function to be performed by the observation platform. The FB can be seen in figure \ref{fig:FBD}.
 
 \begin{figure}[ht]
-\includegraphics[width = \textwidth]{/Figures/FBD/FBD.png}
+\includegraphics[width = \textwidth]{Figures/FBS/FBS.png}
 \label{fig:FBD}
 \caption{FBD for the all plastic high altitude observation platform}
 \end{figure}
@@ -77,16 +79,16 @@ The Functional Breakdown is a diagram used to find all functions the product sho
 To find the required functions for different mission elements the Functional Flow Diagram is used. The FFD shows in which order different mission segments are performed, as well as what happens per segment. The flow diagram for the mission is shown in figure \ref{fig:FFD}
 
 \begin{figure}[ht]
-\includegraphics[width = \textwidth]{/Figures/FFD.pdf}
+\includegraphics[width = \textwidth]{Figures/FFD.pdf}
 \label{fig:FFD}
 \caption{FFD for the all plastic high altitude observation platform}
 \end{figure}
 
 \section{Requirement Discovery Tree}\label{sec:RDT}
-
+All requirements needed to fulfill the task at hand are organized in a requirement discovery tree, which can be found in figure \label{fig:RDT}. Requirements are divided in to several mission parts, which are then breaked down in more subrequirements. 
 
 \begin{figure}
-\includegraphics[width = \textwidth]{/Figures/rdt.png}
+\includegraphics[width = \textwidth]{Figures/rdt.png}
 \label{fig:RDT}
 \caption{RDT for the all plastic high altitude observation platform}
 \end{figure}
