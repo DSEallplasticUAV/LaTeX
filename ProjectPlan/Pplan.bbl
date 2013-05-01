@@ -1,0 +1,19 @@
+\begin{thebibliography}{1}
+\newcommand{\enquote}[1]{``#1''}
+
+\bibitem{website:belbin}
+\enquote{Teamrollen van Belbin,} April 2013.
+
+\bibitem{brundtland1987}
+the World Commission~on Environment, G. H.~B. and Development, \enquote{Our
+  Common Future,} Tech. rep., United Nations.
+
+\bibitem{website:discovery.com1}
+Discovery~Communications, L., \enquote{Shortage of Rare Metals Threatens Tech
+  Innovation,} Januari 2012.
+
+\bibitem{website:phys.org1}
+Cho, R., \enquote{Shortage of Rare Metals Threatens Tech Innovation,} September
+  2012.
+
+\end{thebibliography}

@@ -1,0 +1,43 @@
+\begin{thenomenclature} 
+
+ \nomgroup{A}
+
+  \item [{BD}]\begingroup Block diagram\nomeqref {0}\nompageref{2}
+  \item [{BL}]\begingroup Baseline review\nomeqref {0}\nompageref{2}
+  \item [{BS}]\begingroup Breakdown structure\nomeqref {0}
+		\nompageref{2}
+  \item [{CS}]\begingroup Control and stability\nomeqref {0}
+		\nompageref{2}
+  \item [{DOS}]\begingroup Design option structuring\nomeqref {0}
+		\nompageref{2}
+  \item [{DSE}]\begingroup Design synthesis exercise\nomeqref {0}
+		\nompageref{2}
+  \item [{FB}]\begingroup Functional breakdown\nomeqref {0}
+		\nompageref{2}
+  \item [{FFD}]\begingroup Functional flow diagram\nomeqref {0}
+		\nompageref{2}
+  \item [{HR}]\begingroup Human resources\nomeqref {0}\nompageref{2}
+  \item [{LS}]\begingroup Literature study\nomeqref {0}\nompageref{2}
+  \item [{MNS}]\begingroup Mission need statement\nomeqref {0}
+		\nompageref{2}
+  \item [{MT}]\begingroup Midterm review\nomeqref {0}\nompageref{2}
+  \item [{OBS}]\begingroup not sure where this is?\nomeqref {0}
+		\nompageref{2}
+  \item [{P\&P}]\begingroup Performance and propulsion\nomeqref {0}
+		\nompageref{2}
+  \item [{PD\&D}]\begingroup Project design and development logic\nomeqref {0}
+		\nompageref{2}
+  \item [{PO}]\begingroup Project objective\nomeqref {0}\nompageref{2}
+  \item [{POS}]\begingroup Project objective statement\nomeqref {0}
+		\nompageref{2}
+  \item [{RDT}]\begingroup Requirements discovery tree\nomeqref {0}
+		\nompageref{2}
+  \item [{ROI}]\begingroup Return of investment\nomeqref {0}
+		\nompageref{2}
+  \item [{UAV}]\begingroup Unmanned aerial vehicle\nomeqref {0}
+		\nompageref{2}
+  \item [{WBS}]\begingroup Work breakdown structure\nomeqref {0}
+		\nompageref{2}
+  \item [{WFD}]\begingroup Work flow diagram\nomeqref {0}\nompageref{2}
+
+\end{thenomenclature}

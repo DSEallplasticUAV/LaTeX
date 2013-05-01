@@ -1,0 +1,66 @@
+\documentclass[a4paper]{report}
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{shortvrb}
+\usepackage{cancel}
+\usepackage[T1]{fontenc}
+\usepackage{nicefrac}
+\usepackage{amsfonts}
+
+%nomenclature
+\usepackage{makeidx}
+\makeindex
+\usepackage{nomencl}
+\nomlabelwidth=20mm
+\makenomenclature
+\renewcommand{\nomname}{List of abbreviations}
+
+\usepackage{standalone} %Makes it possible to ignore other preambles of child document
+\usepackage{eurosym} %Euro teken mogelijk
+\usepackage{multirow} %For multiple rows togheter in one table
+\usepackage{parskip} %For a small white line between paragraphs
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{hyperref}%For automatic and URL Reference
+\usepackage[titletoc]{appendix}
+%Possible to change the margins
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.9cm,bmargin=1.7cm,lmargin=1cm,rmargin=1cm}
+
+\usepackage{subfig}
+
+%include pdf pages
+\usepackage{pdfpages}
+
+%being able to create tables over multiple pages
+\usepackage{longtable}
+
+\makeatletter
+
+%Change standard font size
+\renewcommand\normalsize{ \@setfontsize\normalsize{11pt}{11pt}}\normalsize  
+\makeatother
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+
+%Gives text above each page
+\fancyhead[CO,CE]{DSE Project}
+
+%Page number
+\fancyfoot[RO,LE]{\thepage}
+
+
+\usepackage{babel}
+
+%Available structures:
+%Report: \part{}, \chapter{}, \section{}, \subsection{}, \subsubsection{}, \paragraph{}, \subparagraph{}
+
+\begin{document}
+\chapter{Sustainable development (1 page)}\label{SustDev}
+
+\end{document}

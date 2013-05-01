@@ -1,0 +1,114 @@
+\documentclass[a4paper]{report}
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{shortvrb}
+\usepackage{cancel}
+\usepackage[T1]{fontenc}
+\usepackage{nicefrac}
+\usepackage{amsfonts}
+\usepackage{standalone} %Makes it possible to ignore other preambles of child document
+\usepackage{eurosym} %Euro teken mogelijk
+\usepackage{multirow} %For multiple rows togheter in one table
+\usepackage{parskip} %For a small white line between paragraphs
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{hyperref}%For automatic and URL Reference
+\usepackage{appendix}
+%Possible to change the margins
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.9cm,bmargin=1.8cm,lmargin=2cm,rmargin=2cm}
+
+\usepackage{subfig}
+
+%include pdf pages
+\usepackage{pdfpages}
+
+%being able to create tables over multiple pages
+\usepackage{longtable}
+
+\makeatletter
+
+%Change standard font size
+\renewcommand\normalsize{ \@setfontsize\normalsize{11pt}{11pt}}\normalsize  
+\makeatother
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+
+%Gives text above each page
+\fancyhead[CO,CE]{DSE Project}
+
+%Page number
+\fancyfoot[RO,LE]{\thepage}
+
+
+\usepackage{babel}
+
+%Available structures:
+%Report: \part{}, \chapter{}, \section{}, \subsection{}, \subsubsection{}, \paragraph{}, \subparagraph{}
+
+\begin{document}
+\chapter{Project Definition}
+To get a clear understanding of the project and to be able to finish it successfully the Project Objective (PO) and Mission Need Statement (MNS) need to be defined. These statements will be referred to during the entire project to assess the validity of the outcome. Both the PO and MNS can be deduced from a problem statement.
+
+This chapter consists of five sections. ~\autoref{sec:ProblemStatement} gives a description of the problem / context of the project. From this description, the PO is deduced in ~\autoref{sec:ProjectObjective} and the MNS in ~\autoref{sec:MissionNeedStatement}. Next, the top level requirements are presented in ~\autoref{sec:TopLevelRequirements}, followed by a system description in ~\autoref{sec:SystemDescription}.
+
+\section{Problem Statement}
+\label{sec:ProblemStatement}
+The aerospace industry is increasingly using lightweight polymer-reinforced composites as structural components. This results in fast and fuel-efficient aircraft, like the Boeing 787 'Dreamliner'. Simultaneous to this development, polymers have emerged to be used as flexible, light-weight electronics. Now, they can be used as LEDs, solar cells, transistors, batteries and actuators.
+
+Polymers seem to be very interesting materials, also in the aerospace industry. However, introducing a new material in passenger airplanes can take 10 to 15 years. It would be convenient to reduce this time and be able to follow the rapid developments. A solution is to use UAVs as test bed for these new materials.
+
+A specific UAV to be designed is an observation platform which must remain at a given location for one full year to perform observations. It should not be bothered by air traffic, so the cruise altitude is at least 15 km. For station keeping, wind speeds at these altitudes should be taken into account.
+
+By designing this UAV several questions can be answered: Is it possible to develop such a system from plastics alone? What changes the use of polymers in design, since they can be multi-functional? What will such a system look like and how will it operate? What are the advantages and limitations of such an approach?
+
+\section{Project Objective}
+\label{sec:ProjectObjective}
+From the problem statement it becomes clear that a UAV should be designed to demonstrate the use of multi-functional plastics. Therefore, the Project Objective can be stated as follows:\\
+{\textit "Design a fully multi-functional plastics, high altitude observation platform for a mission of one year at moderate latitudes by 10 students in 11 weeks."}
+
+Because this project is performed for educational purposes within a limited time the aim is not to produce a industrial-worthy, flawless end-result. Although it is very important to iterate design choices for design experience, this process has a limited time-frame and does not have to produce the optimal outcome.
+
+Equally important is the execution of the project, which comprises elements like performing an integrated project and operating as a team. Communication with tutors, coaches and other members of the faculty is also a valuable aspect.
+\section{Mission Need Statement}
+\label{sec:MissionNeedStatement}
+To identify what the product to be designed has to comprise, the Mission Need Statement is deduced from the problem statement. It will provide a check whether the design objective set by the customer(s) is correctly understood and will form a basis for the requirements discovery tree. The Mission Need Statement defined for this product is as follows:\\
+{\textit "Observe the Earth with sufficient accuracy to spot individuals from a stationary position above all air traffic for one year."}
+\section{Top Level Requirements}
+\label{sec:TopLevelRequirements}
+For the system, some top level requirements are given. From these requirements, some more specific requirements will be derived, but these will be treated in the following report. Apart from the given list, important requirements are the use of multifunctional parts and that most of the aircraft will consist of "plastic" materials.\\
+The following list shows the top level requirements given to us.
+\begin{itemize}
+\item Maximum take-off mass is not limited
+\item The size of the aircraft is not limited, but needs to be practical in operation (ground operation e.g.)
+\item Take-off and landing must be possible in wind force 3 conditions
+\item Maximum cross wind during take-off and landing of 5 kts
+\item Cruise altitude above all traffic, 15 km or above
+\item Cruise will take place between 0$^\circ$ and 55$^\circ$ latitude
+\item At cruise altitude, a 90\% station keeping must be guaranteed
+\item Able to fly non-stop for one full year
+\item Payload mass is limited to a maximum of 3 kg
+\item Payload should be kept at operating temperature with minimum power usage, preferably below 25 W
+\item The payload should be able to track individuals on the ground from cruise altitude, night vision is a plus
+\item On board energy storage is allowed
+\item Communication and data handling must be designed
+\item The costs of a mission should be less than 1 million euro based on a series of 100 devices.
+\item Sustainability will be taken into account
+\item Stealth characteristics shall be included
+\end{itemize}
+These requirements must be met by the design. They are the base for further specification on system requirements. Some system requirements will be about the resolution, the frame rate, link-budget and power needed. These will be specified more in the Baseline report. The top level requirements can be used to give a description about the entire system in very general terms.
+\section{Description of Entire System}
+\label{sec:SystemDescription}
+From the requirements it is clear that the system is about observation from a stationary platform at high altitude. This mission will need different subsystems that will be described now.
+
+First of all, the aircraft will have to take-off. A ground crew will be needed to assist with this. This ground crew will also give information to the UAV on target area and objectives. After take-off, it will fly autonomously to the cruise altitude and after that to the target area. Therefore it will need a system to determine it's location and flight path. Also, a propulsion system is needed to be able to cruise. When it reaches the target area, it must be able to remain stationary and observe the ground. Since it needs to be able to track movements of individuals on the ground, some sort of camera needs to be on board with sufficient resolution and field of view. 
+
+Because this data is needed in real time, and not after the end of the mission one year later, communication with the ground is needed. This is necessary in two ways, because commands can be send to the UAV as well. The link budget is important for the amount of data that can be produced by the payload. Again, a ground crew is needed for processing the data. After mission completion, the UAV needs to be able to fly back to base and land safely. It will preferably be reusable for a new mission.
+
+The UAV itself will need to stay in the air non-stop for one full year. Because all of the above requires energy, an important system will be the energy system. Whether all the energy is stored pre-flight or energy will be regained during flight, it will play an important role in the design.
+\end{document}

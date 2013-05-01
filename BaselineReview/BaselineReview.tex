@@ -1,0 +1,150 @@
+\documentclass[a4paper]{report}
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{shortvrb}
+\usepackage{cancel}
+\usepackage[T1]{fontenc}
+\usepackage{nicefrac}
+\usepackage{amsfonts}
+%nomenclature
+\usepackage{makeidx}
+\makeindex
+\usepackage{nomencl}
+\makenomenclature
+\renewcommand{\nomname}{List of Symbols}
+
+\usepackage{standalone} %Makes it possible to ignore other preambles of child document
+\usepackage{eurosym} %Euro teken mogelijk
+\usepackage{multirow} %For multiple rows togheter in one table
+\usepackage{parskip} %For a small white line between paragraphs
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{hyperref}%For automatic and URL Reference
+\usepackage[titletoc]{appendix}
+%Possible to change the margins
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.9cm,bmargin=1.7cm,lmargin=1cm,rmargin=1cm}
+
+\usepackage{subfig}
+
+%include pdf pages
+\usepackage{pdfpages}
+
+%Small titles
+\usepackage[small,compact]{titlesec}
+
+%being able to create tables over multiple pages
+\usepackage{longtable}
+
+\makeatletter
+
+%Change standard font size
+\renewcommand\normalsize{ \@setfontsize\normalsize{11pt}{11pt}}\normalsize  
+\makeatother
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+
+%Gives text above each page
+\fancyhead[CO,CE]{DSE Project}
+
+%Page number
+\fancyfoot[RO,LE]{\thepage}
+
+
+\usepackage{babel}
+
+\newcommand*{\titleDSE}{\begingroup% Three Men in a Boat
+\newlength{\drop}
+\setlength{\drop}{0.1\textheight}
+\centering
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.5]{Figures/TUdelftLogo.jpg}
+\end{figure}
+\settowidth{\unitlength}{\LARGE AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA}
+
+\rule{\unitlength}{1.6pt}\vspace*{-\baselineskip}\vspace*{2pt}
+\rule{\unitlength}{0.4pt}\\[\baselineskip]
+{\LARGE Baseline Review}\\[\baselineskip]			%Main Title
+{\itshape DSE All Plastic UAV}\\[0.2\baselineskip]					%subtitle
+\rule{\unitlength}{0.4pt}\vspace*{-\baselineskip}\vspace{3.2pt}
+\rule{\unitlength}{1.6pt}\\[\baselineskip]
+\vspace*{0.1\drop}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width =0.75 \textwidth]{Figures/TitleImage.jpg}
+\end{figure}
+\vfill
+
+\begin{table}[h]
+\subfloat{
+\begin{tabular}{l l}
+\multicolumn{2}{l}{\textbf{Tutors}} \\
+\\
+Prof. dr. ir. Dingemans, T. & TU Delft\\
+Ir. Melkert J. & TU Delft\\
+\\
+\multicolumn{2}{l}{\textbf{Coaches}}\\
+\\
+Ir. Bos, R. & TU Delft\\
+M.Sc. Udluft H. & TU Delft
+\end{tabular}
+}
+\hfill
+\subfloat{
+\begin{tabular}{r r}
+\multicolumn{2}{r} {\textbf{Group members}} \\
+\\
+d. Heij, B. & 1507095 \\
+Jeliazkov, M.K. & 4105826 \\
+Kerssemakers, M.A.P. & 4005880\\
+V.D. Kieboom, B. & 4114752 \\
+Mooi, K. & 4020367 \\
+Roelofs, M.N. & 4077407 \\
+Seelen, J. & 1317547\\
+v. Stralen, R. & 4019342 \\
+Vendrig, P.R. & 4023838 \\
+Verhoeff, C.K. & 1114344 \\
+\end{tabular}
+}
+\end{table}
+
+\endgroup}
+
+%Available structures:
+%Report: \part{}, \chapter{}, \section{}, \subsection{}, \subsubsection{}, \paragraph{}, \subparagraph{}
+
+\begin{document}
+
+\begin{titlepage}
+\titleDSE
+\end{titlepage}
+\setcounter{page}{1} %numbering starts from here
+\tableofcontents
+\newpage
+%\printnomenclature
+\input{InputChapters/Introduction}
+\input{InputChapters/FunctionsOfSystem}
+\input{InputChapters/DesignOptionTree}
+\input{InputChapters/ResourceAllocationBudgetBreakdown}
+\input{InputChapters/MarketAnalysis}
+\input{InputChapters/SustainableApproach}
+
+
+
+\newpage
+\bibliographystyle{aiaa}
+\bibliography{Bibliography/bibliography}
+
+
+\begin{appendices}
+
+\end{appendices}
+
+\end{document}

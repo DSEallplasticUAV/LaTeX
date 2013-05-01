@@ -1,0 +1,159 @@
+\documentclass[10pt,a4paper,twoside]{article}
+\usepackage{a4wide}                     % Iets meer tekst op een bladzijde
+\usepackage[english]{babel}             % Voor nederlandstalige hyphenatie (woordsplitsing)
+\usepackage{amsmath}                    % Uitgebreide wiskundige mogelijkheden
+\usepackage{amssymb}                    % Voor speciale symbolen zoals de verzameling Z, R...
+\usepackage{appendix}					% Appendix package
+\usepackage{makeidx}                    % Om een index te maken
+\usepackage{hyperref}		%content page links to relevant page.
+	\hypersetup{
+		pdfborder = {0 0 0}, 	%removes red border
+%	    	colorlinks,
+%	    	citecolor=black,
+%	   	filecolor=black,
+%	   	linkcolor=black,
+%	   	urlcolor=black
+	}	
+	
+\usepackage{url}                        %for bibliography, to get nice urls
+	\def\UrlLeft{<}
+	\def\UrlRight{>}
+
+\usepackage{tabularx}
+\usepackage[usenames,dvipsnames]{xcolor}
+
+\usepackage{graphicx}                   % Om figuren te kunnen verwerken
+\usepackage[small,bf,hang]{caption}     % Om de captions wat te verbeteren
+%\usepackage{subcaption}
+\usepackage{xspace}                     % Magische spaties na een commando
+%\usepackage[latin1]{inputenc}           % Om niet ascii karakters rechtstreeks te kunnen typen
+\usepackage{float}                      % Om nieuwe float environments aan te maken. Ook optie H!
+\usepackage{flafter}                    % Opdat floats niet zouden voorsteken
+\usepackage{listings}                   % Voor het weergeven van letterlijke text en codelistings
+\usepackage[numbers]{natbib}              % Voor auteur-jaar citaties.
+\usepackage[nottoc]{tocbibind}			% Bibliografie en inhoudsopgave in ToC; zie tocbibind.dvi
+\usepackage{eurosym}                    % om het euro symbool te krijgen
+\usepackage{textcomp}                   % Voor onder andere graden celsius
+\usepackage{fancyhdr}                   % Voor fancy headers en footers
+\usepackage[Gray,squaren,thinqspace,thinspace]{SIunits} % Om elegant eenheden te zetten
+\usepackage[version=3]{mhchem}          % Voor elegante scheikundige formules
+\renewcommand{\baselinestretch}{1.0} %grote witregel in alineas
+\setlength{\parindent}{0pt} %Geen 'insrpingen bij nieuwe alinea'
+\usepackage{pdfpages}
+\usepackage{epstopdf}
+\usepackage{longtable}
+\usepackage{multirow}
+\usepackage{subfiles}
+\usepackage{parskip}
+\usepackage{enumitem}
+\setitemize{noitemsep,topsep=0pt,parsep=0pt,partopsep=0pt}
+
+\usepackage{geometry} 
+%\usepackage{fullpage}
+\geometry{bottom=2.5cm}
+\geometry{top=2.5cm}
+\geometry{left=2cm}
+\geometry{right=2cm}
+
+%\pagestyle{fancy}                       
+%\renewcommand{\headrulewidth}{0.4pt}
+%\renewcommand{\footrulewidth}{0.4pt}
+\usepackage{lastpage}
+% Redefine plain page style
+\fancypagestyle{plain}{
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\fancyfoot[CO,CE]{\footnotesize AE3205 Simulation, Verification and Validation\\
+Delft University of Technology, The Netherlands}
+\fancyfoot[RO,LE]{Page \thepage}%~of~\pageref{LastPage}}
+\fancyfoot[LO,RE] {Group C10}
+}
+%% Redefine main page style
+\fancypagestyle{main}{
+\renewcommand{\headrulewidth}{0.4pt} 
+\renewcommand{\footrulewidth}{0.4pt}
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{}\rfoot{}
+\fancyhf{}
+\fancyfoot[CO,CE]{\footnotesize AE3205 Simulation, Verification and Validation\\
+Delft University of Technology, The Netherlands}
+\fancyfoot[RO,LE]{Page \thepage~of~\pageref{LastPage}}% \space of \space \pageref{LastPage}}
+\fancyfoot[LO,RE] {Group C10}
+\fancyhead[LE,RO]{\rightmark} 
+\fancyhead[RE,LO]{\leftmark}
+}
+
+\graphicspath{{Figures/}}
+\usepackage{hhline}
+\usepackage{colortbl}
+\usepackage{dcolumn}
+\usepackage{multicol}
+\usepackage{subfigure}
+
+\usepackage{nomencl}
+\makenomenclature
+\newcommand*{\nom}[2]{\nomenclature{#1}{#2}}
+% Allows us to just type \nom{$variable$}{blablabla} and it will print and add to the nomenclature
+
+%\let\stdsection\section
+%\renewcommand*\section{\cleardoublepage\stdsection}
+
+\begin{document}
+
+\subfile{../1.frontpage/Titlepage.tex}
+
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\renewcommand*\nompreamble{\begin{multicols}{2}}
+\renewcommand*\nompostamble{\end{multicols}}
+
+\printnomenclature
+\newpage
+
+\tableofcontents
+\addtocontents{toc}{\protect\enlargethispage{\baselineskip}}
+\newpage
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\pagestyle{main}
+%%%-----INTRODUCTION-------
+\subfile{../2.introduction/introduction.tex}
+\subfile{../13.Appendix/Group_Work.tex}
+
+%%%-ASSESSMENT(individual and group)
+\clearpage	
+	\subfile{../4.Individual_Assesment/Assessment.tex}
+		\subfile{../4.Individual_Assesment/assessment_bas.tex}
+		\subfile{../4.Individual_Assesment/assessment_Boudewijn.tex}
+		\subfile{../4.Individual_Assesment/assessment_Feitze.tex}
+		\subfile{../4.Individual_Assesment/assessment_gert.tex}
+		\subfile{../4.Individual_Assesment/assessment_Glenn.tex}
+		\subfile{../4.Individual_Assesment/assessment_Hanjiu.tex}
+	\subfile{../4.Individual_Assesment/Group_Assessment.tex}
+
+%%%-FLIGHTDYNAMICSASSESSMENT
+\clearpage	
+	\subfile{../5.groupassessment/group_assessment_onFDA.tex}
+
+%%%-SYNTHESISPROPOSAL
+\clearpage	
+	\subfile{../10.Synthesisproposal/synthesisproposal.tex}
+		\subfile{../10.Synthesisproposal/causes.tex}
+		\subfile{../10.Synthesisproposal/plan.tex}
+		\subfile{../10.Synthesisproposal/conceptassignment.tex}
+		\subfile{../10.Synthesisproposal/swot.tex}
+
+
+%%%-CONCLUSION
+\clearpage	
+	\subfile{../11.conclusion/conclusion.tex}
+
+%%%-------BIBLIOGRAPHY-----
+\clearpage	
+	\subfile{../12.references/References.tex}
+
+\end{document}

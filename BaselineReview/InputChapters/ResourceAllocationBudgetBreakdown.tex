@@ -1,0 +1,80 @@
+\documentclass[a4paper]{report}
+\usepackage[english]{babel}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{shortvrb}
+\usepackage{cancel}
+\usepackage[T1]{fontenc}
+\usepackage{nicefrac}
+\usepackage{amsfonts}
+\usepackage{standalone} %Makes it possible to ignore other preambles of child document
+\usepackage{eurosym} %Euro teken mogelijk
+\usepackage{multirow} %For multiple rows togheter in one table
+\usepackage{parskip} %For a small white line between paragraphs
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{hyperref}%For automatic and URL Reference
+\usepackage[titletoc]{appendix}
+%Possible to change the margins
+\usepackage{geometry}
+\geometry{verbose,tmargin=1.9cm,bmargin=1.8cm,lmargin=2cm,rmargin=2cm}
+
+\usepackage{subfig}
+
+%include pdf pages
+\usepackage{pdfpages}
+
+%being able to create tables over multiple pages
+\usepackage{longtable}
+
+\makeatletter
+
+%Change standard font size
+\renewcommand\normalsize{ \@setfontsize\normalsize{11pt}{11pt}}\normalsize  
+\makeatother
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+
+%Gives text above each page
+\fancyhead[CO,CE]{DSE Project}
+
+%Page number
+\fancyfoot[RO,LE]{\thepage}
+
+
+\usepackage{babel}
+
+%Available structures:
+%Report: \part{}, \chapter{}, \section{}, \subsection{}, \subsubsection{}, \paragraph{}, \subparagraph{}
+
+\begin{document}
+\chapter{Resource Allocation and Budget Breakdown (3 pages)}\label{chap:RABB}
+
+In this chapter the technical resources for the system are defined and allocated to the different necessary subsystems of the vehicle. Since the concept of the vehicle is still unknown, different general concepts will be discussed. The technical budgets that are important for this mission are the mass budget, the power budget and the link budget computing power budget. The mass budget assigns estimated percentages of the overall weight to the different parts of the vehicle. It will be a preliminary estimation to get limits on the weight of components to make sure the total weight stays within a margin of the estimated total weight. The power budgets allocates the power that is generated and can be used to the systems that require power. The computing resources budget allocates the available computing power necessary for the mission to the subsystems that require computing power. Other budgets are the height budget, the endurance budget and the dimensions budget. These depend on the concept and are first estimates on the possible heights to be flown at, maximum endurance and maximum dimensions.
+
+The mass budget can be divided into the following components:
+\begin{itemize}
+\item Payload
+\begin{itemize}
+\item Camera
+\item Lens
+\item Support structure
+\end{itemize}
+\item Propulsion system
+\item Computing & communications system
+\item Power supply system
+\item Electrical system
+\item Structures
+\begin{itemize}
+\item Airframe
+\item Fuselage
+\item Control surfaces
+\item Landing gear
+\item Nacelles
+\end{itemize}
+\end{itemize}
+\end{document}
